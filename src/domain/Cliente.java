@@ -24,18 +24,26 @@ public class Cliente {
 	@lombok.Setter
 	private String telefone;
 	
+	@lombok.Getter
+	@lombok.Setter
+	private Conta conta;
+	
+	
 	// ==== Construtores ==== //
 	public Cliente() {
 		this.cod = SEQUENCIAL ++;
 	}
 
-	public Cliente(String nome, String dataNascimento, String cpfOuCnpj, String telefone) {
+	public Cliente(String nome, String dataNascimento, String cpfOuCnpj, String telefone,Conta conta) {
 		this.cod = SEQUENCIAL ++;
 		this.nome = nome;
 		this.dataNascimento = dataNascimento;
 		this.cpfOuCnpj = cpfOuCnpj;
 		this.telefone = telefone;
+		this.conta = conta;
 	}
+
+	
 	
 	
 }
